@@ -1,13 +1,13 @@
 =============== HOW TO BUILD AND RUN THE CODE: ===============
 
-- You need to have Java installed. 
+- You need to have Java version 8+ installed. 
 - It can be run via an IDE or through CLI using javac.
-	- If IDE just opened the project folder/java file in your preferred IDE. You'll need to edit the run configuration to include CLI arguments.
+	- If using IDE open the project folder/java file in your preferred IDE. You'll need to edit the run configuration to include CLI arguments.
 	- for CLI, open your command prompt and navigate to the project folder directory, then type:
 		
 		javac ComputeStats.java
 		
-	Then allow it to compile, follow up with:
+	This will compile ComputeStats, follow up with:
 	
 		java ComputeStats textfile.txt
 		
@@ -25,7 +25,7 @@ You have to choose the txt file via command line arguments rather edit the code 
 This is because users shouldn't have access the raw code, and should be more inuitive. 
 This could be expanded to include a file browser in more complex systems.
 
-Using try and catch incase the user enters the wrong filepath.
+Used try and catch incase the user enters the wrong filepath.
 
 Line count increments each time the loop runs, as it will run "while txt file has another line".
 
