@@ -14,7 +14,6 @@ public class ComputeStats
         int totalLetterCount= 0;
         double averageNumberOfLetterPerWord;
         int[] frequencyAnalysisArray = new int[26];
-        int[] mostCommonLetterArray = new int[26];
         char mostCommonLetter;
         File fileObj;
         Scanner fileReader = null;
@@ -71,16 +70,6 @@ public class ComputeStats
                 }
             }
 
-            //Go through again and make sure there isn't two letters that have the most appearances.
-            for (int i = 0; i < frequencyAnalysisArray.length; i++)
-            {
-                if (frequencyAnalysisArray[i] == frequencyAnalysisArray[highestIndex])
-                {
-                    mostCommonLetterArray[i] = 1;
-                }
-            }
-
-
             //Now calculate the average using total word count and total letter count
             averageNumberOfLetterPerWord = (double)totalLetterCount / (double)totalWordCount; //cast to double to keep accurate decimal
 
@@ -91,12 +80,12 @@ public class ComputeStats
 
         System.out.println("Most Common Letter(s): ");
         //In case there are multiple most common letters, run through this loop to show them all.
-        for (int i = 0; i < mostCommonLetterArray.length; i++)
+        for (int i = 0; i < frequencyAnalysisArray.length; i++)
         {
-            if(mostCommonLetterArray[i] == 1)
+            if(frequencyAnalysisArray[i] == frequencyAnalysisArray[highestIndex])
             {
                 mostCommonLetter = (char)(i + 65);
-                System.out.println(mostCommonLetter);
+                System.out.print(mostCommonLetter + " ");
             }
 
         }
